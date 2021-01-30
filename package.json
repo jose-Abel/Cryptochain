@@ -2,7 +2,7 @@
   "name": "cryptochain",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "block.js",
   "scripts": {
     "test": "jest --watchAll"
   },
@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^23.6.0"
   }
 }
