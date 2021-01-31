@@ -1,5 +1,7 @@
 const Block = require('./block');
 
+const { GENESIS_DATA } = require('./config');
+
 describe('Block', ()=> {
     
     const timestamp = 2000;
@@ -16,7 +18,7 @@ describe('Block', ()=> {
     
     const block = new Block({timestamp, lastHash, hash, data, nonce, difficulty});
     
-    it('has a timestamp, lastHash, hash, data property, nonce and difficulty', ()=> {
+    it('has a timestamp, lastHash, hash and a data property', ()=> {
         expect(block.timestamp).toEqual(timestamp);
         expect(block.lastHash).toEqual(lastHash);        
         expect(block.hash).toEqual(hash);
@@ -26,5 +28,16 @@ describe('Block', ()=> {
         expect(block.difficulty).toEqual(difficulty);
         
     })
- 
+    
+    describe('genesis()', ()=> {
+        const genesisBlock = Block.genesis();
+        
+        it('returns a Block instance', ()=> {
+            expect(genesisBlock instanceof Block).toBe(true);
+        })
+        it('returns the genesis data', ()=> {
+            expect(genesisBlock).toEqual(GENESIS_DATA);
+        });
+    });
+    
 });

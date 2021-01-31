@@ -1,6 +1,4 @@
-const {GENESIS_DATA, MINE_RATE} = require('../backup/config');
-
-const cryptoHash = require('../backup/crypto-hash');
+const {GENESIS_DATA} = require('../backup/config');
 
 class Block {
     
@@ -13,7 +11,10 @@ class Block {
         this.nonce = nonce;
         this.difficulty = difficulty;
     }
- 
+    
+    static genesis(){
+        return new this(GENESIS_DATA);
+    }
 }
 
 module.exports = Block;
