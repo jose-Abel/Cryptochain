@@ -67,7 +67,6 @@ describe('Block', ()=> {
         
         it('creates a SHA-256 `hash` based on the proper inputs', ()=>{
            expect(minedBlock.hash).toEqual(
-               
                cryptoHash(
                    minedBlock.timestamp, 
                    minedBlock.nonce, 
@@ -76,6 +75,10 @@ describe('Block', ()=> {
                    data
                )
            );
+        });
+
+        it('sets a `hash` that matches the difficulty criteria', ()=>{
+            expect(minedBlock.hash.substring(0, minedBlock.difficulty)).toEqual('0'.repeat(minedBlock.difficulty));
         });
 
     });
