@@ -4,7 +4,7 @@ const Block = require('./block');
 
 const { GENESIS_DATA, MINE_RATE } = require('../config');
 
-const cryptoHash = require('../util/crypto-hash');
+const { cryptoHash } = require('../util');
 
 
 describe('Block', ()=> {
