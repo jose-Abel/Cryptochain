@@ -21,7 +21,7 @@ const transactionPool = new TransactionPool();
 
 const wallet = new Wallet();
 
-const pubsub = new PubSub({blockchain});
+const pubsub = new PubSub({ blockchain, transactionPool });
 
 const DEFAULT_PORT = 3000;
 
