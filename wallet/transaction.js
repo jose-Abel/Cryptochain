@@ -36,6 +36,7 @@ class Transaction {
 
     if(!this.outputMap[recipient]) {
       this.outputMap[recipient] = amount;
+      
     } else {
       this.outputMap[recipient] = this.outputMap[recipient] + amount;
     }
