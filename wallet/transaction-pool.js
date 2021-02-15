@@ -12,6 +12,8 @@ class TransactionPool {
 
     return transactions.find(transaction => transaction.input.address === inputAddress);
   }
+
+  
 }
 
 module.exports = TransactionPool;
