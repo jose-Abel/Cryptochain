@@ -98,7 +98,7 @@ app.get("/api/wallet-info", (req, res) => {
       address: address
     })
   });
-})
+});
 
 const syncWithRootState = () => {
   request({url: `${ROOT_NODE_ADDRESS}/api/blocks`}, (error, response, body) => {
