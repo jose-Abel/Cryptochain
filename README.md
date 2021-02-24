@@ -4,6 +4,21 @@
 
 ## Built With
 
+- Javascript
+- Backend with Node.js Express library
+- Frontend with React.js and React-dom
+-
+
+### NPM Packages
+
+- body-parser
+- elliptic
+- express
+- hex-to-binary
+- redis
+- request
+- uuid
+
 ## Author
 
 - 👤GitHub: [Jose Abel Ramirez](https://github.com/jose-Abel)
