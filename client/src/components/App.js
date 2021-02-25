@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import Blocks from "./Blocks";
 
 class App extends Component {
   state = {
-    walletInfo: { address: "fooxb6", balance: 9999}
+    walletInfo: {}
   }
 
   componentDidMount() {
@@ -19,6 +20,8 @@ class App extends Component {
         <div>Welcome to the blockchain!</div>
         <div>Address: {address}</div>
         <div>Balance: {balance}</div>
+        <br />
+        <Blocks />
       </div>
     );
   }
