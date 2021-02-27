@@ -18,7 +18,9 @@
 - redis
 - request
 - uuid
-- react-bootstrap 0.32.4
+- react-bootstrap
+- react-router-dom
+- history
 
 ## Author
 
