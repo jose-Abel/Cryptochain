@@ -3,6 +3,8 @@
 This project consist of a Full-stack blockchain, following the guide in the course "Build a Blockchain & Cryptocurrency Full-Stack Edition" by David Joseph Katz.
 
 ![screenshot](./app_screenshot.png)
+![screenshot](./app_screenshot2.png)
+![screenshot](./app_screenshot3.png)
 
 ## Built With
 
