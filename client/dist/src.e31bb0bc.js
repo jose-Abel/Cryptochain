@@ -46825,7 +46825,8 @@ var ConductTransaction = /*#__PURE__*/function (_Component) {
 
     return _possibleConstructorReturn(_this, (_temp = _this = _super.call.apply(_super, [this].concat(args)), _this.state = {
       recipient: "",
-      amount: 0
+      amount: 0,
+      knownAddresses: []
     }, _this.updateRecipient = function (event) {
       _this.setState({
         recipient: event.target.value
@@ -46858,13 +46859,30 @@ var ConductTransaction = /*#__PURE__*/function (_Component) {
   }
 
   _createClass(ConductTransaction, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      fetch("".concat(document.location.origin, "/api/known-addresses")).then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        return _this2.setState({
+          knownAddresses: json
+        });
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return _react.default.createElement("div", {
         className: "ConductTransaction"
       }, _react.default.createElement(_reactRouterDom.Link, {
         to: "/"
-      }, "Home"), _react.default.createElement("h3", null, "Conduct a Transaction"), _react.default.createElement(_reactBootstrap.FormGroup, null, _react.default.createElement(_reactBootstrap.FormControl, {
+      }, "Home"), _react.default.createElement("h3", null, "Conduct a Transaction"), _react.default.createElement("br", null), _react.default.createElement("h4", null, "Known Addresses"), this.state.knownAddresses.map(function (knownAddresses) {
+        return _react.default.createElement("div", {
+          key: knownAddresses
+        }, _react.default.createElement("div", null, knownAddresses), _react.default.createElement("br", null));
+      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.FormGroup, null, _react.default.createElement(_reactBootstrap.FormControl, {
         input: "text",
         placeholder: "recipient",
         value: this.state.recipient,
@@ -47151,7 +47169,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57475" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65507" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

@@ -7,7 +7,6 @@
 - Javascript
 - Backend with Node.js Express library
 - Frontend with React.js and React-dom
--
 
 ### NPM Packages
 
@@ -29,7 +28,11 @@
 
 ## Getting Started
 
-## Live version
+## Live versions
+
+https://immense-eyrie-10479.herokuapp.com/
+
+https://secret-dawn-01529.herokuapp.com/
 
 ### Setup
 
